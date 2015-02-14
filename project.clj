@@ -9,7 +9,8 @@
                  [ring/ring-codec "1.0.0"]
                  [hiccup "1.0.5"]
                  [org.clojure/data.json "0.2.4"]
-                 [org.clojure/tools.cli "0.3.1"]]
+                 [org.clojure/tools.cli "0.3.1"]
+                 [reagent "0.5.0-alpha3"]]
 
   :profiles { :dev {:dependencies [[org.clojure/tools.trace "0.7.6"]
                                    [midje "1.5.1"]]}}
