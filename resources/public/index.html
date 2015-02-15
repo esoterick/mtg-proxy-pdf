@@ -11,14 +11,15 @@
     <div class="row">
       <div class="large-12 columns">
         <h1>MTG</h1>
+        <div id="content"></div>
       </div>
     </div>
-    <script src="http://fb.me/react-0.12.1.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="http://fb.me/react-0.12.1.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
+    <script type="text/javascript" src="http://fb.me/react-0.12.1.js"></script>
+    <script type="text/javascript" src="js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="js/foundation.min.js"></script>
+    <script>$(document).foundation();</script>
+    <script type="text/javascript" src="js/out/goog/base.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
+    <script type="text/javascript">goog.require("mtg_proxy_pdf.client");</script>
   </body>
 </html>
