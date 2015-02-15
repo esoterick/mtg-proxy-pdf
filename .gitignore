@@ -1,3 +1,22 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations
+*_archive
+*_flymake.*
+/eshell/history
+/eshell/lastdir
+# elpa packages
+/elpa/
+*.rel
+/auto/
+.cask/
 /target
 /classes
 /checkouts
@@ -11,3 +30,4 @@ test.html
 test.pdf
 image_sources.json
 /test/target/*
+
