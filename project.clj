@@ -13,7 +13,8 @@
                  [hiccup "1.0.5"]
                  [org.clojure/data.json "0.2.4"]
                  [org.clojure/tools.cli "0.3.1"]
-                 [org.clojure/clojurescript "0.0-2850"]]
+                 [org.clojure/clojurescript "0.0-2850"]
+                 [reagent "0.5.0-alpha3"]]
 
   :plugins [[lein-cljsbuild "1.0.4"]]
 
