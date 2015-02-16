@@ -8,10 +8,33 @@
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns top-bar">
-        <span>MTG Proxy</span>
-      </div>
+    <div class="contain-to-grid sticky">
+      <nav class="top-bar" data-topbar role="navigation" data-options="sticky_on: large">
+        <ul class="title-area">
+          <li class="name">
+            <h1><a href="#">MTG Proxy</a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+          <ul class="right">
+            <li class="has-dropdown">
+              <a href="#">username</a>
+              <ul class="dropdown">
+                <li><a href="#">Profile</a></li>
+                <li class="active"><a href="#">Decks</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="left">
+            <li class="active"><a href="#">Search</a></li>
+            <li><a href="#">Browse</a></li>
+          </ul>
+        </section>
+      </nav>
     </div>
     <div class="row">
       <div class="large-12 columns">

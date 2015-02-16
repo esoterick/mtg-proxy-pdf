@@ -3,7 +3,7 @@
 
 (defn header []
   [:div
-   [:div.page-header [:h1 "Search"]]])
+   [:div [:h2 "Search"]]])
 
 (reagent/render-component [header] (.getElementById js/document "header"))
 
@@ -15,7 +15,6 @@
 
 (defn app []
   [:div
-   [:div.page-header [:h3 "app"]]
    [:form
     [text-input "search"]
     ]])
