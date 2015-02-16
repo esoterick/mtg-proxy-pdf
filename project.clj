@@ -7,16 +7,22 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [enlive "1.1.5"]
                  [clj-pdf "1.11.15"]
-                 [ring/ring-codec "1.0.0"]
+                 [compojure "1.2.2"]
+                 [enlive "1.1.5"]
                  [hiccup "1.0.5"]
+                 [org.clojure/clojurescript "0.0-2850"]
                  [org.clojure/data.json "0.2.4"]
                  [org.clojure/tools.cli "0.3.1"]
-                 [org.clojure/clojurescript "0.0-2850"]
-                 [reagent "0.5.0-alpha3"]]
+                 [reagent "0.5.0-alpha3"]
+                 [ring/ring-codec "1.0.0"]
+                 [ring/ring-core "1.3.2"]
+                 [ring/ring-json "0.3.1"]]
 
-  :plugins [[lein-cljsbuild "1.0.4"]]
+  :plugins [[lein-cljsbuild "1.0.4"]
+            [lein-ring "0.8.13"]]
+
+  :ring {:handler mtg-proxy-pdf.server/app}
 
   :cljsbuild {:builds [{:source-paths ["src/cljs"]
                         :compiler {:output-to "resources/public/js/client.js"
