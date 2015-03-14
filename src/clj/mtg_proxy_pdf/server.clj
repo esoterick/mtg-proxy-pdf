@@ -9,6 +9,7 @@
 (defroutes app-routes
   (GET "/" [] (resource-response "index.html" {:root "public"}))
   (GET "/ac/:query" {{query :query} :params} (str (api/ac-card query)))
+  (GET "/card/:id" {{id :id} :params} (str (api/get-card id)))
   (route/resources "/")
   (route/not-found "Page not found"))
 
