@@ -3,11 +3,12 @@
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
             [compojure.core :refer [GET defroutes]]
+            [mtg-proxy-pdf.api :as api]
             [ring.middleware.json :as middleware]))
 
 (defroutes app-routes
   (GET "/" [] (resource-response "index.html" {:root "public"}))
-  (GET "/widgets" [] (response [{:name "Mark of the Vampire"}]))
+  (GET "/ac/:query" {{query :query} :params} (str (api/ac-card query)))
   (route/resources "/")
   (route/not-found "Page not found"))
 

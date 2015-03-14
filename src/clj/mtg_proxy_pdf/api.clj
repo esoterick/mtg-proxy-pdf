@@ -5,6 +5,7 @@
             [clojure.core.cache :as cache]))
 
 ;; Define the api endpoints
+;; TODO: move these in to a config file
 (def api-base "https://api.deckbrew.com")
 (def api-card (str/join [api-base "/mtg/cards/"]))
 (def api-ac-url (str/join [api-base "/mtg/cards/typeahead?q="]))
