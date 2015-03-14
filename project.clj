@@ -7,7 +7,6 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[clj-pdf "1.11.15"]
-                 [com.novemberain/monger "2.0.0"]
                  [compojure "1.2.2"]
                  [enlive "1.1.5"]
                  [hiccup "1.0.5"]
