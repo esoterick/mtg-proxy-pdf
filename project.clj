@@ -6,12 +6,14 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [clj-pdf "1.11.15"]
+  :dependencies [[clj-pdf "1.11.15"]
+                 [com.novemberain/monger "2.0.0"]
                  [compojure "1.2.2"]
                  [enlive "1.1.5"]
                  [hiccup "1.0.5"]
+                 [org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2850"]
+                 [org.clojure/core.cache "0.6.4"]
                  [org.clojure/data.json "0.2.4"]
                  [org.clojure/tools.cli "0.3.1"]
                  [reagent "0.5.0-alpha3"]
