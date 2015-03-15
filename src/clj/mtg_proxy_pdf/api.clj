@@ -9,8 +9,9 @@
 (def api-base "https://api.deckbrew.com")
 (def api-card (str/join [api-base "/mtg/cards/"]))
 (def api-ac-url (str/join [api-base "/mtg/cards/typeahead?q="]))
+(def api-all-cards (str/join [api-base "/mtg/cards"]))
 
-(def card-cache (cache/ttl-cache-factory {}))
+(def card-cache (cache/ttl-cache-factory {} :ttl 3600))
 
 (defn fetch-url
   "Creates HTTP request with address and returns a json object of returned data"
@@ -34,3 +35,21 @@
     (if (cache/has? card-cache card)
       (cache/hit card-cache card)
       (cache/miss card-cache card (fetch-url (str/join [api-card card-id]))))))
+
+(defn cache-card
+  [card]
+  (-> card-cache (assoc (symbol (card "id")) card)))
+
+(defn refresh-cache
+  "Pull all the cards from the api and refresh our cache."
+  []
+  (let [cards (fetch-url api-all-cards)]
+    (map cache-card cards)))
+
+(defn view-cache
+  "View data in he cache given an id"
+  [id]
+  (let [card (symbol id)]
+    (if (cache/has? card-cache card)
+      (cache/hit card-cache card)
+      "No Object in Cache")))
