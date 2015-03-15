@@ -6,10 +6,13 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[clj-pdf "1.11.15"]
+  :dependencies [[cheshire "5.3.1"]
+                 [clj-pdf "1.11.15"]
+                 [com.novemberain/monger "2.0.0"]
                  [compojure "1.2.2"]
                  [enlive "1.1.5"]
                  [hiccup "1.0.5"]
+                 [http-kit "2.1.16"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2850"]
                  [org.clojure/core.cache "0.6.4"]
